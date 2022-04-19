@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* HEADER */
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background: rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.logo__link {
+ color: black;
+ text-decoration: none;
+}
+
+.logo {
+  margin-left: .5rem;
+  font-size: 1.7rem;
+}
+
+
+.nav__list {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+
+.nav__link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+  padding: .4rem;
+  display: block;
+}
+
+.nav__item {
+  padding: 3.rem;
+}
+
+.nav__item:hover {
+  background-color: rgb(148, 144, 143);
+}
+
+
+
+
+
+/* INTRO */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  height: 100vh;
+  width: 100%;
+  max-width: 1400px;
+  scroll-snap-align: center;
+  margin: 0 auto;
+}
+
+
+.intro {
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.9rem;
+}
+
+
+.intro p {
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+}
+
+.btn-container {
+  padding: 1rem 0;
+  width: 100%;
+}
+
+
+.btn {
+  text-decoration: none;
+  background-color: rgb(148, 146, 146);
+  color: black;
+  display: inline;
+  padding: 1rem;
+}
+
+.btn:hover {
+  background-color: rgb(131, 128, 127);
+}
+
+
+
+
+
+/* SKILLS */
+.skills-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  scroll-snap-align: center;
+  margin: 0 auto;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+
+/* PROJECTS */ 
+.projects {
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  align-items: center;
+  max-width: 1400px;
+  scroll-snap-align: center;
+}
+
+.thumbnail {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 95%;
+  transition: 1s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+
+
+
+
+/* ABOUT ME */
+.about-me-container {
+  padding: 10rem;
+  margin-bottom: 10rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  scroll-snap-align: center;
+  margin: 0 auto;
+}
+
+.about-me-text h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-right: 2.2rem;
+}
+
+.about-me-text {
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 1400px;
+}
+
+
+
+
+
+/* TOGGLE BUTTON */
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* CONTACT */
+.contact-container {
+  height: 100vh;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: center;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+form h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form input, form textarea {
+   border: 0;
+   margin: 1rem auto;
+   padding: 20px;
+   outline: none;
+   background: rgba(0,0,0,0.1);
+   font-family: 'Roboto Mono', monospace;
+   width: 65%;
+   max-width: 1000px;
+}
+
+form button {
+  padding: 15px;
+  background: rgb(148, 146, 146);
+  color: black;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0; 
+}
+
+form button:hover {
+  background-color: rgb(131, 128, 127);
+}
+
+
+
+
+
+/* ICONS */
+.icons-link {
+  color: black;
+}
+
+.fa-brands {
+  margin-left: .5rem;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 620px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .intro-container {
+    margin-top: 1.8rem;
+  }
+  
+
+  form {
+    width: 100%;
+  }
+
+  .intro {
+    width: 100%;
+  }
+ 
+  .skills {
+    padding: 0 2rem;
+  }
+
+  .about-me-text h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-left: 2.1rem;
+  }
+
+  .about-me-text {
+    width: 100%;
+    padding: 0 2.2rem;
+    text-align: justify;
+  }
+
+  .about-me-container {
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    background-color: rgb(148, 144, 143);
+    display: none;
+  }
+   
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  
+  .nav__list {
+    flex-direction: column;
+    gap: .2rem;
+    width: 100%;
+  }
+  
+  .nav__list li {
+    text-align: center;
+  }
+ 
+  
+  .nav.active {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 620px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
